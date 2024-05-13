@@ -23,13 +23,13 @@ def parse_args():
     return parser.parse_args()
 
 def handle_specific_commit(commit):
-    get_reposense_jar('https://api.github.com/repos/reposense/RepoSense/commits/' + commit, commit=commit)
+    get_reposense_jar('https://api.github.com/repos/ckcherry23/RepoSense/commits/' + commit, commit=commit)
 
 def handle_specific_release(tag):
-    get_reposense_jar('https://api.github.com/repos/reposense/RepoSense/releases/tags/' + tag, tag=tag)
+    get_reposense_jar('https://api.github.com/repos/ckcherry23/RepoSense/releases/tags/' + tag, tag=tag)
 
 def handle_latest_release():
-    get_reposense_jar('https://api.github.com/repos/reposense/RepoSense/releases/latest')
+    get_reposense_jar('https://api.github.com/repos/ckcherry23/RepoSense/releases/latest')
 
 def get_reposense_jar(url, tag=None, commit=None):
     response = requests.get(url)
@@ -61,7 +61,7 @@ def clone_and_make_reposense(tag=None, commit=None):
 
     command = \
     '''
-    git clone 'https://github.com/reposense/RepoSense.git' &&
+    git clone 'https://github.com/ckcherry23/RepoSense.git' &&
     cd RepoSense &&
     '''
 
